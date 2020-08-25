@@ -1,0 +1,460 @@
+/*=================================================================================*/
+/*=================================================================================*/
+/*==========================||---------------------------||========================*/
+/*==========================|| DESIGNED BY  HOSSAM HILAL ||========================*/
+/*==========================||---------------------------||========================*/
+/*====================================||------||===================================*/
+/*====================================|| 2020 ||===================================*/
+/*====================================||------||===================================*/
+/*=================================================================================*/
+/*=================================================================================*/
+
+/* fonts*/
+@font-face {
+    font-family: URW DIN Arabic;
+    src: url('../fonts/URWDINArabicSemiCond-Demi.eot');
+    src: url('../fonts/URWDINArabicSemiCond-Demi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/URWDINArabicSemiCond-Demi.woff2') format('woff2'),
+        url('../fonts/URWDINArabicSemiCond-Demi.woff') format('woff'),
+        url('../fonts/URWDINArabicSemiCond-Demi.ttf') format('truetype'),
+        url('../fonts/URWDINArabicSemiCond-Demi.svg#URWDINArabicSemiCond-Demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: URW DIN Arabic;
+    src: url('../fonts/URWDINArabicSemiCond-Medium.eot');
+    src: url('../fonts/URWDINArabicSemiCond-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/URWDINArabicSemiCond-Medium.woff2') format('woff2'),
+        url('../fonts/URWDINArabicSemiCond-Medium.woff') format('woff'),
+        url('../fonts/URWDINArabicSemiCond-Medium.ttf') format('truetype'),
+        url('../fonts/URWDINArabicSemiCond-Medium.svg#URWDINArabicSemiCond-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: URW DIN Arabic;
+    src: url('../fonts/URWDINArabicSemiCond-Bold.eot');
+    src: url('../fonts/URWDINArabicSemiCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/URWDINArabicSemiCond-Bold.woff2') format('woff2'),
+        url('../fonts/URWDINArabicSemiCond-Bold.woff') format('woff'),
+        url('../fonts/URWDINArabicSemiCond-Bold.ttf') format('truetype'),
+        url('../fonts/URWDINArabicSemiCond-Bold.svg#URWDINArabicSemiCond-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**** Init ****/
+body {
+    font-family: URW DIN Arabic, sans-serif;
+    overflow-x: hidden;
+    direction: rtl;
+    text-align: right;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||             Header        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.header {
+    background: url('../images/headerBg.png') no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 {
+    font: bold 52px/67px URW DIN Arabic;
+}
+
+.header p {
+    font: 500 14px/25px URW DIN Arabic;
+    letter-spacing: 0.21px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.headerContacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContact {
+    padding: 15px 30px;
+}
+
+.headerContact .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 0 auto 15px;
+}
+
+.headerContact h4,
+.headerContact a {
+    font: normal 20px/34px JF Flat;
+    color: inherit;
+}
+
+.headerContact a:hover {
+    color: #EC633D;
+}
+
+@media screen and (max-width:768px) { 
+    .header {
+        padding: 40px 0;
+    }
+    
+    .header h1 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    
+    .header p {
+        font-size: 13px;
+        margin: 20px auto;
+    }
+     
+    .headerContact .icon {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        margin: 0 auto 10px;
+    }
+
+    .headerContact h4, .headerContact a {
+        font-size: 13px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .headerContact {
+        width: 50%;
+    }
+
+    .headerContact:first-of-type {
+        padding: 0 0 0 5px;
+        border-left: 1px solid #3c3c3c;
+    }
+    
+    .headerContact:last-of-type {
+        padding: 0 5px 0 0;
+    }
+
+    .headerContact .icon {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        margin: 0 auto 10px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Services        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.secPadding {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.secHead {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    position: relative;
+}
+
+.secHead h2 {
+    font: normal 40px/65px URW DIN Arabic;
+    color: #202020;
+}
+
+.secHead p {
+    font: normal 14px/25px URW DIN Arabic;
+    letter-spacing: 0.21px;
+    color: #6A6A6A;
+}
+
+.secHead::before,
+.secHead::after {
+    content: '';
+    width: 68px;
+    height: 2px;
+    background: #EC633D;
+    position: absolute;
+    top: 100%;
+}
+
+.secHead::before {
+    margin-top: 20px;
+    right: calc(50% - 50px);
+}
+
+.secHead::after {
+    margin-top: 30px;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.service img {
+    border-radius: 8px;
+    width: 100%;
+    height: 247px;
+    margin-bottom: 20px;
+}
+
+.service h2 {
+    font: 500 25px/32px URW DIN Arabic;
+    color: #202020;
+    margin-bottom: 13px;
+}
+
+.service p {
+    font: normal 14px/24px JF Flat;
+    color: #6A6A6A;
+}
+
+@media screen and (max-width:768px) {
+    .secPadding {
+        padding: 30px 0;
+    }
+    
+    .secHead h2 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    
+    .secHead p {
+        font-size: 13px;
+    }
+    
+    .secHead::before, .secHead::after {
+        width: 40px;
+    }
+    
+    .secHead::before {
+        right: calc(50% - 30px);
+    }
+    
+    .service img {
+        height: 180px;
+        margin-bottom: 10px;
+    }
+    
+    .service h2 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .service p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .service img {
+        height: auto;
+    }
+
+    .service h2 {
+        margin-bottom: 3px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .row {
+        margin: 0 -5px;
+    }
+    
+    .col-12 {
+        padding: 0 7px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||             Banks         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.banks {
+    background: #FFF6F3;
+}
+
+.bank {
+    height: 130px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.bank img {
+    max-height: 110px;
+}
+
+.bank:hover {
+    transform: translateY(-10px);
+}
+
+.bank::before {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    border: 2px solid transparent;
+}
+
+.bank:hover::before {
+    border-top-color: #EC633D;
+    border-right-color: #EC633D;
+    border-bottom-color: #EC633D;
+    border-left-color: #EC633D;
+    transition: border-top-color 0.5s linear, border-right-color 0.5s linear 0.1s, border-bottom-color 0.5s linear 0.2s, border-left-color 0.5s linear 0.3s;
+}
+
+@media screen and (max-width:768px) {
+    .bank {
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||          Advantages       ||========================*/
+/*==========================||---------------------------||========================*/
+
+.advantage {
+    text-align: right;
+    cursor: pointer;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+
+.advantage:hover {
+    box-shadow: 0 0px 18px #e9ecef;
+    transform: scale(1.2);
+    background: #fff;
+    z-index: 2;
+}
+
+.advantage h4 {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.advantage span {
+    font: normal 33px/42px URW DIN Arabic;
+    color: #EC633D;
+    position: relative;
+    z-index: 1;
+}
+
+.advantage h4::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -20px;
+    right: -22px;
+    font: normal 46px/60px URW DIN Arabic;
+    color: #F3F3F3;
+    opacity: 0.53;
+    z-index: 0;
+    transition: all .5s ease-in-out;
+}
+
+.advantage:hover h4::before {
+    top: -10px;
+    right: 0;
+    font-size: 33px;
+    color: #ff9800;
+    opacity: 1;
+}
+
+.advantage h5 {
+    font: normal 16px/30px URW DIN Arabic;
+    color: #6A6A6A;
+}
+
+@media screen and (max-width:768px) {
+    .advantage {
+        padding: 10px 20px;
+    }
+    
+    .advantage h4 {
+        margin-bottom: 5px;
+    }
+    
+    .advantage h5 {
+        font-size: 13px;
+        line-height: 23px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||             Side          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.side {
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    z-index: 9;
+    display: none;
+}
+
+.side .icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3px;
+    margin-right: auto;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.side img {
+    max-width: 20px;
+}
+
+.side .icon:hover {
+    background: #e20f24;
+    width: 55px;
+}
+
+.side .icon:first-of-type:hover {
+    background: #4caf50;
+}
+
+.side .icon:hover img {
+    filter: brightness(0) invert(1);
+}
